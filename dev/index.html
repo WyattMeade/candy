@@ -4,25 +4,39 @@
 <meta charset="UTF-8">
 <title></title>
 <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-<!-- build:css css/gouda.css -->
-  <link rel="stylesheet" href="css/styles.css">
+<!-- build:css css/candy.css -->
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <!-- endbuild -->
 </head>
 <body>
 	
-<!-- Start Your HTML -->
+<!-- Video Player -->
 
-<video width="720" height="405">
+<video id="video" width="720" height="405">
   
   <source src="video/starry-night.mp4" type="video/mp4">
-  <source src="video/starry-night.ogg" type="video/ogg">
-  <source src="video/starry-night.webm" type="video/ogg">
+  <source src="video/starry-night.ogv" type="video/ogv">
+  <source src="video/starry-night.webm" type="video/webm">
 
-	Your browser does not support the video tag.
+	<p>Your browser does not support the video tag.</p>
 
 </video>
 
-<!-- build:js js/gouda.js -->
+<!-- Video Controls -->
+
+<div>
+	
+	<button type="button" id="play-pause"><i class="fa fa-play"></i></button>
+  <input type="range" id="seek-bar" value="0">
+  <button type="button" id="mute"><i class="fa fa-volume-off"></i></button>
+  <input type="range" id="volume-bar" min="0" max="1" step="0.1" value="1">
+  <button type="button" id="full-screen"><i class="fa fa-expand"></i></button>
+
+</div>
+
+
+<!-- build:js js/candy.js -->
 	<script src="js/jquery.js"></script>
 <!-- endbuild -->
 </body>

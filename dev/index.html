@@ -9,30 +9,26 @@
   <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <!-- endbuild -->
 </head>
-<body>
-	
-<!-- Video Player -->
-
-<video class="video" width="720" height="405">
+<body>  
   
-  <source src="video/starry-night.mp4" type="video/mp4">
-  <source src="video/starry-night.ogv" type="video/ogv">
-  <source src="video/starry-night.webm" type="video/webm">
+  <div> 
 
-	<p>Your browser does not support the video tag.</p>
-
-</video>
-
-<!-- Video Controls -->
-
-<div>
-	
-	<button type="button" class="play-pause"><i class="fa fa-play"></i></button>
-  <button type="button" class="mute"><i class="fa fa-volume-off"></i></button>
-  <button type="button" class="full-screen"><i class="fa fa-expand"></i></button>
-
-</div>
-
+    <button onclick="playPause()">Play/Pause</button> 
+    <button onclick="makeBig()">Big</button>
+    <button onclick="makeSmall()">Small</button>
+    <button onclick="makeNormal()">Normal</button>
+    <br> 
+    
+    <video id="video1" width="720" height="404">
+    
+      <source src="video/starry-night.mp4" type="video/mp4">
+      <source src="video/starry-night.ogv" type="video/ogv">
+      <source src="video/starry-night.webm" type="video/webm">
+      <p>Your browser does not support HTML5 video.</p>
+    
+    </video>
+  
+  </div>
 
 <!-- build:js js/candy.js -->
 	<script src="js/jquery.js"></script>

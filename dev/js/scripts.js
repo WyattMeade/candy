@@ -2,34 +2,35 @@ window.onload = function() {
 
 	var myVideo = document.getElementById("video1"); 
 
-	function playPause() { 
+	document.getElementById("playbutton").onclick = function() {playPause()};
+	document.getElementById("enlargebutton").onclick = function() {makeBig()};
 
-		if (myVideo.paused) 
+	function playPause(){
 
-	    myVideo.play(); 
+		if (myVideo.paused)
 
-	  else 
+			myVideo.play();
 
-	  	myVideo.pause(); 
+		else myVideo.pause();
 
-	} 
+	};
 
 	function makeBig() { 
 	
 	  myVideo.width = 1080;
 	
-	} 
+	};
 
 	function makeSmall() { 
 	
-	  myVideo.width = 320; 
+		myVideo.width = 320; 
 	
-	} 
+	}; 
 
 	function makeNormal() { 
 	
-	    myVideo.width = 720; 
+	  myVideo.width = 720; 
 
-	} 
+	}; 
 
-}
+};

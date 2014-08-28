@@ -1,9 +1,12 @@
 /* line 1, styles.scss */
 div {
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
-/* line 7, styles.scss */
-.big {
-  font-size: 50px;
+/* line 8, styles.scss */
+video {
+  margin: 0;
+  padding: 0;
 }

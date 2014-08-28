@@ -5,13 +5,21 @@ window.onload = function() {
 	document.getElementById("playbutton").onclick = function() {playPause()};
 	document.getElementById("enlargebutton").onclick = function() {makeBig()};
 
-	function playPause(){
+	function playPause() {
 
-		if (myVideo.paused)
+		if (myVideo.paused) {
 
 			myVideo.play();
+			$("i").addClass("fa-pause").removeClass("fa-play");
 
-		else myVideo.pause();
+		}
+
+		else {
+
+			myVideo.pause();
+			$("i").addClass("fa-play").removeClass("fa-pause");
+			
+		}
 
 	};
 

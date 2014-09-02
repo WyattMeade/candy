@@ -1,6 +1,7 @@
 window.onload = function() {
 
-	var myVideo = document.getElementById("video1"); 
+	var myVideo = document.getElementById("video1");
+	var display = document.getElementById("timeDisplay");
 
 	document.getElementById("play").onclick = function() {playPause()};
 	document.getElementById("expand").onclick = function() {makeBig()};
@@ -49,6 +50,14 @@ window.onload = function() {
 	  myVideo.width = 720;
 	  myVideo.height = 404; 
 
-	}; 
+	};
+
+
+	// Show Elapsed Time
+	myVideo.addEventListener("timeupdate", function () {
+
+       display.innerText = myVideo.currentTime.toFixed(1) ;
+     
+    }, false);
 
 };

@@ -8,8 +8,10 @@ window.onload = function() {
 	document.getElementById("expand").onclick = function() {makeBig()};
 	document.getElementById("shrink").onclick = function() {makeSmall()};
 	document.getElementById("normal").onclick = function() {makeNormal()};
+	document.getElementById("stop").onclick = function() {stopVideo()};
+	document.getElementById("replay").onclick = function() {replayVideo()};
 
-	// Play Button
+	// Play/Pause Button
 	function playPause() {
 
 		if (myVideo.paused) {
@@ -28,6 +30,21 @@ window.onload = function() {
 
 	};
 
+	// Stop Button
+	function stopVideo(){
+
+		myVideo.pause();
+		myVideo.currentTime = 0;
+
+	}
+
+	// Replay Button
+	function replayVideo(){
+
+		myVideo.currentTime = 0;
+
+	}
+
 	// Expand Video
 	function makeBig() { 
 
@@ -35,7 +52,6 @@ window.onload = function() {
 	  	myVideo.height = 720;
 	
 	};
-
 	
 	// Shrink Video
 	function makeSmall() { 
@@ -53,7 +69,6 @@ window.onload = function() {
 
 	};
 
-
 	// Show Elapsed Time
 	myVideo.addEventListener("timeupdate", function () {
 
@@ -62,7 +77,7 @@ window.onload = function() {
     }, false);
 
     // Show Duration
+	duration.innerText = myVideo.duration.toFixed(2);
 
-    duration.innerText = myVideo.duration.toFixed(2);
 
 };

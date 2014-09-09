@@ -3,6 +3,7 @@ window.onload = function() {
 	var myVideo = document.getElementById("video1");
 	var display = document.getElementById("timeDisplay");
 	var duration = document.getElementById("duration");
+	var volumeBar = document.getElementById("volume");
 
 	document.getElementById("play").onclick = function() {playPause()};
 	document.getElementById("expand").onclick = function() {makeBig()};
@@ -54,17 +55,26 @@ window.onload = function() {
 
 			myVideo.muted = false;
 			$("#mute").find("i").addClass("fa-volume-off").removeClass("fa-volume-up");
+			volumeBar.value = 1;
 
 		}
 
 		else {
 
 			myVideo.muted = true;
-			$("#mute").find("i").addClass("fa-volume-up").removeClass("fa-volume-off");			
+			$("#mute").find("i").addClass("fa-volume-up").removeClass("fa-volume-off");
+			volumeBar.value = 0;			
 
 		}
 
 	}
+
+	// Sound Slider
+	volumeBar.addEventListener("change", function() {
+
+		myVideo.volume = volumeBar.value;
+
+	})
 
 	// Expand Video
 	function makeBig() { 

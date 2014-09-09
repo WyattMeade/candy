@@ -10,6 +10,7 @@ window.onload = function() {
 	document.getElementById("normal").onclick = function() {makeNormal()};
 	document.getElementById("stop").onclick = function() {stopVideo()};
 	document.getElementById("replay").onclick = function() {replayVideo()};
+	document.getElementById("mute").onclick = function() {muteVideo()};
 
 	// Play/Pause Button
 	function playPause() {
@@ -17,14 +18,14 @@ window.onload = function() {
 		if (myVideo.paused) {
 
 			myVideo.play();
-			$("i").addClass("fa-pause").removeClass("fa-play");
+			$("#play").find("i").addClass("fa-pause").removeClass("fa-play");
 
 		}
 
 		else {
 
 			myVideo.pause();
-			$("i").addClass("fa-play").removeClass("fa-pause");
+			$("#play").find("i").addClass("fa-play").removeClass("fa-pause");
 
 		}
 
@@ -35,6 +36,7 @@ window.onload = function() {
 
 		myVideo.pause();
 		myVideo.currentTime = 0;
+		$("#play").find("i").addClass("fa-play").removeClass("fa-pause");
 
 	}
 
@@ -42,6 +44,25 @@ window.onload = function() {
 	function replayVideo(){
 
 		myVideo.currentTime = 0;
+
+	}
+
+	// Mute Button
+	function muteVideo(){
+
+		if (myVideo.muted){
+
+			myVideo.muted = false;
+			$("#mute").find("i").addClass("fa-volume-off").removeClass("fa-volume-up");
+
+		}
+
+		else {
+
+			myVideo.muted = true;
+			$("#mute").find("i").addClass("fa-volume-up").removeClass("fa-volume-off");			
+
+		}
 
 	}
 

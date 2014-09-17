@@ -1,3 +1,61 @@
+@import "app/base/reset";
+@import "app/base/core";
+
+i {
+
+    @extend %icon;
+
+}
+
+[data-icon="play"] {
+
+    @extend %icon-play;
+
+}
+[data-icon="pause"] {
+
+    @extend %icon-pause;
+
+}
+
+[data-icon="stop"] {
+
+    @extend %icon-stop;
+
+}
+[data-icon="shrink"] {
+
+    @extend %icon-resize-small;
+
+}
+[data-icon="expand"] {
+
+    @extend %icon-resize-full;
+
+}
+[data-icon="default"] {
+
+    @extend %icon-fullscreen;
+
+}
+[data-icon="mute"] {
+
+    @extend %icon-volume-off;
+
+}
+[data-icon="replay"] {
+
+    @extend %icon-repeat;
+
+}
+[data-icon="volume-up"] {
+
+    @extend %icon-volume-up;
+
+}
+
+
+
 div {
 
 	text-align: center;

@@ -10,34 +10,17 @@
 </head>
 <body>  
   
-  <div> 
-
-    <button id="play"><i data-icon="play"></i></button>
-    <button id="stop"><i data-icon="stop"></i></button>
-    <button id="replay"><i data-icon="replay"></i></button>
-    <button id="mute"><i data-icon="mute"></i></button>
-    <input type="range" id="volume" min="0" max="1" step="0.1" value="1">
-    <button id="expand"><i data-icon="expand" ></i></button>
-    <button id="shrink"><i data-icon="shrink"></i></button>
-    <button id="default"><i data-icon="default"></i></button>
-    <br>
-    <div>Elapsed Time: <span id="timeDisplay"></span> / <span id="duration"></span></div>
-    <br> 
-    
-    <video id="video1" width="720" height="404">
-    
-      <source src="video/starry-night.mp4" type="video/mp4">
-      <source src="video/starry-night.ogv" type="video/ogv">
-      <source src="video/starry-night.webm" type="video/webm">
-      <p>Your browser does not support HTML5 video.</p>
-    
-    </video>
-  
-  </div>
+  <div class="candy" data-width="720" data-height="404" data-sizing="true" data-loop="false" data-controls="true" data-muted="false" data-progress="true" data-preload="true" data-poster="false" data-hover="false"></div>
 
 <!-- build:js js/candy.js -->
-	<script src="js/jquery.js"></script>
-  <script src="js/scripts.js"></script>
+	<script src="js/libs/jquery.js"></script>
+  <script src="js/libs/handlebars.min.js"></script>
+  <script src="js/templates/compiled.js"></script>
+  <script src="js/candy.js"></script>
 <!-- endbuild -->
+
+  <script>
+  $(document).candy();
+  </script>
 </body>
 </html>

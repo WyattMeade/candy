@@ -41,6 +41,13 @@ module.exports = function(grunt) {
                     livereload: true
                 }
             },
+            coffee: {
+                files: ['<%= config.app %>/js/coffee/**/*.coffee'],
+                tasks: ['coffee'],
+                options: {
+                    livereload: true
+                }
+            },
             livereload: {
                 options: {
                     livereload: '<%= connect.options.livereload %>'
@@ -60,6 +67,16 @@ module.exports = function(grunt) {
                         return filename.substring(filename.lastIndexOf('/')+1, filename.length - 4);
                     }
                 }
+            }
+        },
+        coffee: {
+            compile: {
+                expand: true,
+                flatten: true,
+                cwd: '<%= config.app %>/js/coffee/',
+                src: ['*.coffee'],
+                dest: '<%= config.app %>/js/',
+                ext: '.js'
             }
         },
         // The actual grunt server settings

@@ -1,4 +1,4 @@
-var myVideo = document.getElementById("video1");
+/*var myVideo = document.getElementById("video1");
 var display = document.getElementById("timeDisplay");
 var duration = document.getElementById("duration");
 var volumeBar = document.getElementById("volume");
@@ -116,4 +116,4 @@ myVideo.addEventListener("timeupdate", function() {
 }, false);
 
 // Show Duration
-duration.innerText = myVideo.duration.toFixed(2);
+duration.innerText = myVideo.duration.toFixed(2);*/
